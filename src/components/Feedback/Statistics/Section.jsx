@@ -1,4 +1,6 @@
 import css from '../Statistics/Section.module.css';
+import PropTypes from 'prop-types';
+
 export const Section = ({ title, children }) => {
   return (
     <section className={css.feedbackSection}>
@@ -6,4 +8,8 @@ export const Section = ({ title, children }) => {
       {children}
     </section>
   );
+};
+PropTypes.Section = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };

@@ -1,4 +1,6 @@
 import css from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
+
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={css.buttonsWrapper}>
@@ -14,4 +16,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       ))}
     </div>
   );
+};
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
