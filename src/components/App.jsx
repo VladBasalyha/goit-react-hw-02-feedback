@@ -1,16 +1,9 @@
+import { Feedback } from './Feedback/Feedback';
+import { Section } from './Feedback/Statistics/Section';
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React homework template
-    </div>
+    <Section title={'Leave your feedback'}>
+      <Feedback></Feedback>
+    </Section>
   );
 };
