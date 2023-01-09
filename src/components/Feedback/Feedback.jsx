@@ -27,10 +27,11 @@ export class Feedback extends Component {
     const { good, bad, neutral } = this.state;
     const totalFeedbacks = this.countTotalFeedbacks();
     const positivePercentage = this.countPositivePercentage();
+    const keysOfState = Object.keys(this.state);
     return (
       <>
         <FeedbackOptions
-          options={['good', 'bad', 'neutral']}
+          options={keysOfState}
           onLeaveFeedback={this.onLeaveFeedback.bind(this)}
         ></FeedbackOptions>
         {totalFeedbacks ? (

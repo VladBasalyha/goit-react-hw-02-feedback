@@ -1,5 +1,6 @@
 import css from '../Statistics/Section.module.css';
 import PropTypes from 'prop-types';
+import { Section } from '../Statistics/Section';
 
 export const Statistic = ({
   good,
@@ -10,20 +11,21 @@ export const Statistic = ({
 }) => {
   return (
     <div className={css.statisticsWrapper}>
-      <p className={css.statisticsParagraph}>Statistics</p>
-      <span>Good: {good}</span>
-      <br />
-      <span>Neutral: {bad}</span>
-      <br />
-      <span>Bad: {neutral}</span>
-      <span>
+      <Section className={css.statisticsParagraph} title={'Statistic'}>
+        <span>Good: {good}</span>
         <br />
-        Total: {total}
-      </span>
-      <span>
+        <span>Neutral: {bad}</span>
         <br />
-        Positive feedback: {positivePercentage}%
-      </span>
+        <span>Bad: {neutral}</span>
+        <span>
+          <br />
+          Total: {total}
+        </span>
+        <span>
+          <br />
+          Positive feedback: {positivePercentage}%
+        </span>
+      </Section>
     </div>
   );
 };
